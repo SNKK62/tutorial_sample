@@ -1,7 +1,21 @@
 
 @import "bootstrap";
+@import '../stylesheets/application';
 
+li{
+    a {
+        color: #fcfcfc;
+        text-decoration: underline;
+        &:hover{
+            color:rgb(140, 231, 208)
+        }
+    }
+}
 
+.home{
+    background-color: rgb(196, 196, 196);
+    padding-bottom: 40;
+}
 
 section{
     overflow:auto;
@@ -20,7 +34,7 @@ textarea{
 }
 
 .ue{
-    background-color: rgba(37, 37, 37, 0.37);
+    
     max-width: none;
 
 }
@@ -57,7 +71,7 @@ p{
     float: left;
     margin-right: 10px;
     font-size: 1.7em;
-    color: #777;
+    color: rgb(255, 255, 255);
     text-transform: uppercase;
     letter-spacing: -1px;
     padding-top: 5px;
