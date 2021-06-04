@@ -5,8 +5,33 @@
             <ul class="nav navbar-nav navbar-right ">
                 <li class="navbar-brand "><%= link_to "Home", root_path %> </li>
                 <li class="navbar-brand "><%= link_to "Help", help_path %> </li>
-                <li class="navbar-brand "><%= link_to "Log in", '#' %> </li>
+                
+                <% if logged_in? %>
+                <li class="navbar-brand "><%= link_to "Users", '#' %> </li>
+                  <div class="dropdown">
+                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                      Account 
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                       <li class="dropdown-item"><% link_to "Profile", current_user %></li>
+                       <li class="dropdown-item"><% link_to "Setting" ,  '#' %></li>
+                       <li class="dropdown-item">
+                         <%= link_to "Log out", logout_path, method: :delete %>
+                       </li>
+
+                        
+                    </div>
+                  </div>
+                <%else%>
+                   <li class="navbar-brand"><%= link_to "Log in ", login_path %></li>
+                <%end%>
+
+
+
             </ul>
+            
+
         </nav>
     </div>
 </header>
