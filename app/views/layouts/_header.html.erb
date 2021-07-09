@@ -1,3 +1,5 @@
+
+
 <header class="navbar navbar-fixed-top ">
     <div class="container navbar navbar-expand-sm ue bg-dark mt-3 mb-3">
         <%= link_to "sample app" , root_path ,id: "logo"%>
@@ -9,20 +11,21 @@
                 <% if logged_in? %>
                 <li class="navbar-brand "><%= link_to "Users", '#' %> </li>
                   <div class="dropdown">
-                 <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                 <button class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                       Account 
-                    </a>
+                    </button>
 
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                       <li class="dropdown-item"><% link_to "Profile", current_user %></li>
-                       <li class="dropdown-item"><% link_to "Setting" ,  '#' %></li>
-                       <li class="dropdown-item">
+                    <div class="dropdown-menu resetcolor" aria-labelledby="dropdownMenuButton">
+                       <li class="dropdown-item resetcolor"><%= link_to "Profile", current_user %></li>
+                       <li class="dropdown-item resetcolor"><%= link_to "Setting" ,  '#' %></li>
+                       <li class="dropdown-item resetcolor">
                          <%= link_to "Log out", logout_path, method: :delete %>
                        </li>
 
                         
                     </div>
                   </div>
+                   
                 <%else%>
                    <li class="navbar-brand"><%= link_to "Log in ", login_path %></li>
                 <%end%>
