@@ -7,6 +7,11 @@ gem 'bootstrap-sass'
 gem 'sprockets-rails'
 gem 'jquery-rails'
 gem 'faker'
+# gem 'carrierwave'
+gem 'mini_magick'
+gem 'image_processing'
+
+gem 'active_storage_validations'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
@@ -70,6 +75,7 @@ end
 
 group :production do
   gem 'pg', '1.1.4'
+  gem 'fog'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
